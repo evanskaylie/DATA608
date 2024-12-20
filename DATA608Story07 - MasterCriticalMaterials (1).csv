@@ -1,0 +1,51 @@
+MATERIAL,COUNTRY,COUNTRY_CODE,ALLEGIANCE,POL_INSTABILITY
+Aluminum,Jamaica,JAM,Neutral,0.384837329
+antimony,China,CHN,Competitor,-0.513097048
+arsenic,China,CHN,Competitor,-0.513097048
+barite,India,IND,Neutral,-0.63507694
+beryllium,Kazakhstan,KAZ,Neutral,-0.273346007
+bismuth,China,CHN,Competitor,-0.513097048
+cerium,China,CHN,Competitor,-0.513097048
+cesium,Germany,DEU,Ally,0.586989284
+chromium,South Africa,ZAF,Neutral,-0.665642023
+cobalt,Norway,NOR,Ally,0.892857432
+dysprosium,China,CHN,Competitor,-0.513097048
+erbium,China,CHN,Competitor,-0.513097048
+europium,China,CHN,Competitor,-0.513097048
+fluorspar,Mexico,MEX,Ally,-0.630761027
+gadolinium,China,CHN,Competitor,-0.513097048
+gallium,Japan,JPN,Neutral,0.951136231
+germanium,Belgium,BEL,Ally,0.403853089
+graphite,China,CHN,Competitor,-0.513097048
+hafnium,China,CHN,Competitor,-0.513097048
+holmium,China,CHN,Competitor,-0.513097048
+indium,Republic of Korea,KOR,Neutral,0.609834731
+iridium,South Africa,ZAF,Neutral,-0.665642023
+lanthanum,China,CHN,Competitor,-0.513097048
+lithium,Argentina,ARG,Neutral,-0.127517909
+lutetium,China,CHN,Competitor,-0.513097048
+magnesium,Canada,CAN,Ally,0.822420537
+manganese,Gabon,GAB,Neutral,-0.335527301
+neodymium,China,CHN,Competitor,-0.513097048
+nickel,Canada,CAN,Ally,0.822420537
+niobium,Brazil,BRA,Neutral,-0.408567786
+palladium,Russia,RUS,Competitor,-1.134333849
+platinum,South Africa,ZAF,Neutral,-0.665642023
+praseodymium,China,CHN,Competitor,-0.513097048
+rhodium,South Africa,ZAF,Neutral,-0.665642023
+rubidium,China,CHN,Competitor,-0.513097048
+ruthenium,South Africa,ZAF,Neutral,-0.665642023
+samarium,China,CHN,Competitor,-0.513097048
+scandium,Japan,JPN,Neutral,0.951136231
+tantalum,China,CHN,Competitor,-0.513097048
+tellurium,Canada,CAN,Ally,0.822420537
+terbium,China,CHN,Competitor,-0.513097048
+thulium,China,CHN,Competitor,-0.513097048
+tin,Peru,PER,Neutral,-0.521785557
+titanium,Japan,JPN,Neutral,0.951136231
+tungsten,China,CHN,Competitor,-0.513097048
+vanadium,Canada,CAN,Ally,0.822420537
+ytterbium,China,CHN,Competitor,-0.513097048
+yttrium,China,CHN,Competitor,-0.513097048
+zinc,Canada,CAN,Ally,0.822420537
+zirconium,South Africa,ZAF,Neutral,-0.665642023
