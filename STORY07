@@ -1,0 +1,96 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+raw_df = pd.read_csv('https://raw.githubusercontent.com/evanskaylie/DATA608/refs/heads/main/DATA608Story07%20-%20MasterCriticalMaterials%20(1).csv')
+
+print(raw_df.head())
+
+# Count materials by country and allegiance
+material_count = raw_df.groupby(['COUNTRY', 'ALLEGIANCE']).size().reset_index(name='COUNT')
+material_count = material_count.sort_values(by='COUNT', ascending=False)
+
+# Define color map for allegiance
+color_map = {
+    'Competitor': 'tomato',
+    'Neutral': 'gold',
+    'Ally': 'mediumspringgreen'
+}
+
+# Create horizontal bar chart
+plt.figure(figsize=(8, 6))
+sns.barplot(
+    data=material_count,
+    y='COUNTRY',
+    x='COUNT',
+    hue='ALLEGIANCE',
+    palette=color_map
+)
+
+plt.xlabel('Count of Materials')
+plt.ylabel('Country')
+plt.title('Count of Materials by Country')
+plt.legend(title='Allegiance')
+plt.show()
+
+
+plt.figure(figsize=(8, 6))
+sns.barplot(
+    data=material_count,
+    y='COUNTRY',
+    x='COUNT'
+)
+
+plt.xlabel('Count of Materials')
+plt.ylabel('Country')
+plt.title('Count of Materials by Country')
+plt.show()
+
+
+
+# Create horizontal bar chart for political instability with color mapping
+raw_df['POL_INSTABILITY'] = raw_df['POL_INSTABILITY'].astype(float)  # Ensure the column is numeric
+
+plt.figure(figsize=(8, 6))
+sns.barplot(
+    data=raw_df,
+    y='COUNTRY',
+    x='POL_INSTABILITY',
+    hue='ALLEGIANCE',
+    palette=color_map
+)
+
+plt.axvline(0, color='black', linestyle='--')  # Add a vertical line at 0
+plt.xlabel('Political Instability')
+plt.ylabel('Country')
+plt.title('Political Instability by Country')
+plt.legend(title='Allegiance')
+plt.show()
+
+
+
+
+# Merge material_count with raw_df to get COUNT for sorting in political instability plot
+merged_df = pd.merge(raw_df, material_count[['COUNTRY', 'COUNT']], on='COUNTRY', how='left')
+
+# Sort merged_df by COUNT
+merged_df = merged_df.sort_values(by='COUNT', ascending=False)
+
+# Create horizontal bar chart for political instability by country, ordered by material count
+merged_df['POL_INSTABILITY'] = merged_df['POL_INSTABILITY'].astype(float)  # Ensure the column is numeric
+
+plt.figure(figsize=(8, 6))
+sns.barplot(
+    data=merged_df,
+    y='COUNTRY',
+    x='POL_INSTABILITY',
+    hue='ALLEGIANCE',
+    palette=color_map
+)
+
+plt.axvline(0, color='black', linestyle='--')  # Add a vertical line at 0
+plt.xlabel('Political Instability')
+plt.ylabel('Country')
+plt.title('Political Instability by Country')
+plt.legend(title='Allegiance')
+plt.show()
